@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if msg %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{ msg }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<form class="row g-3" action="/add_student" method="post">
+  <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="inputName4" name="full_name" >
+  </div>
+    <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" name="email" >
+  </div>
+    <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Register NO</label>
+    <input type="text" class="form-control" id="inputReg4" name="regno">
+  </div>
+    <div class="option1 col-md-6">
+    <label for="inputState1" class="form-label">Department</label>
+    <select id="inputState1" class="form-select1"  name="dept">
+      <option selected>Choose...</option>
+      <option>AE</option>
+        <option>CSE</option>
+        <option>IT</option>
+        <option>ECE</option>
+        <option>EEE</option>
+    </select>
+    </div>
+    <div class="option2 col-md-6">
+    <label for="inputState" class="form-label2">Sex</label>
+    <select id="inputState" class="form-select2" name="sex">
+      <option selected>Choose...</option>
+      <option>Male</option>
+        <option>Female</option>
+    </select>
+    </div>
+    <div class="col-sm-12">
+    <label for="inputEmail4" class="form-label">Contact</label>
+    <input type="number" class="form-control" id="inputNol4" name="contact" >
+  </div>
+  <div class="col-12">
+    <button type="submit" class="add_btn btn-primary">ADD</button>
+  </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/add_student" method="post">
+<div class="d-grid gap-3 col-12 mx-auto">
+  <button type="submit" class="btn1 btn-dark">Add Students</button>
+</div>
+</form>
+
+<form action="/view_student" method="post">
+<div class="d-grid gap-3 col-12 mx-auto">
+  <button type="submit" class="btn1 btn-dark">View Students</button>
+</div>
+</form>
+
+  <form action="delete_student" method="post">
+<div class="d-grid gap-3 col-12 mx-auto">
+  <button type="submit" class="btn1 btn-danger">Delete Students</button>
+</div>
+  </form>
+
+{% endblock content %}
